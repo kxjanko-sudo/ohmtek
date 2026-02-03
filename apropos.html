@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>À propos | OHMTEK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0a0a0a;
+  --bg-soft:#111;
+  --text:#fff;
+  --muted:#9a9a9a;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:30px;
+}
+
+nav a{
+  margin:0 25px;
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+/* HERO */
+.hero{
+  min-height:40vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle at center, #1a1a1a 0%, #000 60%);
+}
+
+.hero h1{
+  font-family:Montserrat;
+  font-size:48px;
+}
+
+/* CONTENT */
+.content{
+  padding:80px 10%;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.block{
+  margin-bottom:60px;
+}
+
+.block h2{
+  font-family:Montserrat;
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.block p{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+  max-width:700px;
+}
+
+/* VALUES */
+.values{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.value{
+  background:var(--bg-soft);
+  padding:30px;
+  border-radius:14px;
+}
+
+.value h3{
+  margin-top:0;
+  font-size:18px;
+  font-family:Montserrat;
+}
+
+.value p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="site internet.html">ACCUEIL</a>
+    <a href="apropos.html">À PROPOS</a>
+    <a href="devis.html">DEVIS</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>À propos d’OHMTEK</h1>
+</section>
+
+<section class="content">
+
+  <!-- QUI TU ES -->
+  <div class="block">
+    <h2>Qui nous sommes</h2>
+    <p>
+      OHMTEK est une entreprise spécialisée en électricité générale, née de la
+      volonté de proposer des installations fiables, modernes et conformes aux
+      normes en vigueur.
+      Nous accompagnons aussi bien les particuliers que les professionnels
+      dans leurs projets électriques, du simple dépannage aux installations
+      complètes.
+    </p>
+  </div>
+
+  <!-- SAVOIR-FAIRE -->
+  <div class="block">
+    <h2>Notre savoir-faire</h2>
+    <p>
+      Forts d’une expérience terrain solide, nous maîtrisons l’ensemble des
+      prestations liées à l’électricité générale :
+      installation, rénovation, mise aux normes, dépannage et maintenance.
+      Chaque intervention est réalisée avec rigueur, précision et souci du détail.
+    </p>
+  </div>
+
+  <!-- VALEURS -->
+  <div class="block">
+    <h2>Nos valeurs</h2>
+
+    <div class="values">
+      <div class="value">
+        <h3>Fiabilité</h3>
+        <p>
+          Des installations durables, sécurisées et conformes aux normes.
+        </p>
+      </div>
+
+      <div class="value">
+        <h3>Transparence</h3>
+        <p>
+          Des conseils clairs, des devis détaillés et aucun frais caché.
+        </p>
+      </div>
+
+      <div class="value">
+        <h3>Réactivité</h3>
+        <p>
+          Des interventions rapides et un suivi sérieux de chaque projet.
+        </p>
+      </div>
+
+      <div class="value">
+        <h3>Qualité</h3>
+        <p>
+          Un travail soigné, réalisé avec des matériaux fiables et éprouvés.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © Société Ohmtek – Tous droits réservés
+</footer>
+
+</body>
+</html>
