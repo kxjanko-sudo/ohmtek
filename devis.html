@@ -166,7 +166,7 @@ footer{
 <section class="form-section">
   <div class="form-box">
 
-    <form id="devisForm" action="mailto:contact@ohmtek.fr" method="post" enctype="text/plain">
+    <form id="devisForm" action="send.php" method="post">
 
       <div class="form-row">
         <div class="form-group">
@@ -259,9 +259,26 @@ footer{
   </svg>
 </a>
 
+
 <script>
-document.getElementById("devisForm").addEventListener("submit", function(){
-  document.getElementById("successMsg").style.display = "block";
+document.getElementById("devisForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const form = this;
+  const data = new FormData(form);
+
+  fetch("send.php", {
+    method: "POST",
+    body: data
+  }).then(res => res.text())
+    .then(res => {
+      if(res.trim() === "OK"){
+        document.getElementById("successMsg").style.display = "block";
+        form.reset();
+      } else {
+        alert("Erreur lors de l’envoi.");
+      }
+    });
 });
 </script>
 
