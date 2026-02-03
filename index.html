@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>OHMTEK | Électricité nouvelle génération</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  .zone{
+    padding:70px 10%;
+    background:#0a0a0a;
+    text-align:center;
+    max-width:1100px;
+    margin:0 auto;
+  }
+
+  .zone h3{
+    font-family:Montserrat;
+    font-size:26px;
+    margin-bottom:15px;
+  }
+
+  .zone p{
+    color:var(--muted);
+    max-width:600px;
+    margin:0 auto;
+    font-size:15px;
+    line-height:1.5;
+  }
+:root{
+  --bg:#0a0a0a;
+  --bg-soft:#111;
+  --text:#fff;
+  --muted:#9a9a9a;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+header{
+  position:absolute;
+  top:0;
+  width:100%;
+  text-align:center;
+  padding:30px;
+  z-index:10;
+}
+
+nav a{
+  margin:0 25px;
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  background:radial-gradient(circle at center, #1a1a1a 0%, #000 60%);
+  overflow:hidden;
+}
+
+.hero-left{
+  position:absolute;
+  left:8%;
+  bottom:10%;
+  max-width:520px;
+  text-align:left;
+}
+
+.hero-left h2{
+  font-weight:300;
+  color:var(--muted);
+  font-size:24px;
+  line-height:1.4;
+}
+
+.hero-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.hero-logo{
+  width:760px;
+  max-width:95vw;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:16px 36px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+.services{
+  padding:100px 12%;
+}
+
+.services h3{
+  font-family:Montserrat;
+  font-size:32px;
+  margin-bottom:60px;
+  text-align:center;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+}
+
+.service{
+  background:var(--bg-soft);
+  padding:35px;
+  border-radius:14px;
+  transition:.3s;
+  text-align:center;
+}
+.service:hover{
+  background:#1a1a1a;
+  transform:translateY(-6px);
+}
+
+.service svg{
+  width:36px;
+  height:36px;
+  margin-bottom:15px;
+}
+
+.process{
+  padding:100px 12%;
+  background:#000;
+  text-align:center;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:30px;
+}
+
+.step{
+  border-top:2px solid #333;
+  padding-top:20px;
+}
+
+footer{
+  padding:40px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* CALL BUTTON */
+.call-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 25px rgba(255,255,255,0.25);
+  cursor:pointer;
+  z-index:9999;
+  animation:pulse 2s infinite;
+  transition:0.3s;
+}
+
+.call-btn:hover{background:#fff;}
+.call-btn:hover svg{stroke:#000;}
+
+.call-btn svg{
+  width:30px;
+  height:30px;
+  stroke:#fff;
+}
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px){
+    header nav{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;}
+    .hero-left{left:6%;bottom:8%;max-width:90%;}
+    .hero-left h2{font-size:18px;}
+    .hero-center{top:40%;}
+    .hero-logo{width:90vw;}
+    .services,.process{padding:60px 8%;}
+    .services-grid{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="#services">SERVICES</a>
+    <a href="#process">MÉTHODE</a>
+    <a href="apropos.html">À PROPOS</a>
+    <a href="devis.html">DEVIS</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-left">
+    <h2>
+      L’électricité nouvelle génération.<br>
+      Précision, fiabilité et performance.
+    </h2>
+    <a href="devis.html" class="btn">DEMANDER UN DEVIS</a>
+  </div>
+
+  <div class="hero-center">
+    <img src="ohmtek-logo.png" class="hero-logo" alt="Ohmtek">
+  </div>
+
+</section>
+
+<section class="services" id="services">
+  <h3>Nos services</h3>
+  <div class="services-grid">
+
+    <div class="service">
+      <svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+      </svg>
+      <h4>Installation électrique</h4>
+      <p>Installations complètes et rénovations aux normes.</p>
+    </div>
+
+    <div class="service">
+      <svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M22 12h-4l-3 9-4-18-3 9H2"/>
+      </svg>
+      <h4>Dépannage</h4>
+      <p>Interventions rapides et efficaces.</p>
+    </div>
+
+    <div class="service">
+      <svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M3 12l9-9 9 9v9H3z"/>
+      </svg>
+      <h4>Rénovation</h4>
+      <p>Remise à niveau de vos installations.</p>
+    </div>
+
+    <div class="service">
+      <svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 2v20M2 12h20"/>
+      </svg>
+      <h4>Borne de recharge</h4>
+      <p>Solutions pour véhicules électriques.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="process" id="process">
+  <h3>Notre méthode</h3>
+  <div class="steps">
+    <div class="step">01<br>Contact</div>
+    <div class="step">02<br>Diagnostic</div>
+    <div class="step">03<br>Devis</div>
+    <div class="step">04<br>Intervention</div>
+    <div class="step">05<br>Garantie</div>
+  </div>
+</section>
+
+<section class="zone">
+  <h3>Zone d’intervention</h3>
+
+  <p>
+    Basé en Île-de-France, OHMTEK se déplace pour vos projets électriques dans les
+    départements <strong>28, 45, 75, 77, 78, 91, 92, 93, 94 et 95</strong>,
+    afin de vous garantir réactivité, proximité et qualité de service.<br>
+    <strong>Même en dehors de notre secteur, n’hésitez pas à me contacter.</strong>
+  </p>
+</section>
+
+<footer>
+  © Société Ohmtek – Tous droits réservés
+</footer>
+
+<!-- BOUTON APPEL -->
+<a href="tel:0649721643" class="call-btn" aria-label="Appeler Ohmtek">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 
+      19.79 19.79 0 0 1-8.63-3.07 
+      19.5 19.5 0 0 1-6-6 
+      19.79 19.79 0 0 1-3.07-8.67 
+      A2 2 0 0 1 4.11 2h3 
+      a2 2 0 0 1 2 1.72 
+      12.84 12.84 0 0 1-.7 2.81 
+      a2 2 0 0 1-.45.68L7.91 8.09 
+      a16 16 0 0 0 6 6l.88-.88 
+      a2 2 0 0 1 .68-.45 
+      12.84 12.84 0 0 1 2.81-.7 
+      a2 2 0 0 1 1.72 2z"/>
+  </svg>
+</a>
+
+</body>
+</html>
